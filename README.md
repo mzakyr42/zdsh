@@ -8,15 +8,18 @@ builtin command:
 - [x] cd
 - [x] exit
 - [ ] ls
-- [ ] pwd
-- [ ] clear
+- [x] pwd
+- [x] clear
 
 features:
 - [x] pipe
-- [ ] comment
+- [x] comment
+- [x] multiline input
 - [ ] completion
 - [ ] multi process
 - [ ] history
 - [ ] variable
+
+multiline input still imperfect
 
 sorry for my bad english.
