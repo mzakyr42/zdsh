@@ -11,7 +11,7 @@ pub fn run() {
         let prompt = if multiline_input.is_empty() {
             "> "
         } else {
-            ".. "
+            "  "
         };
         print!("{}", prompt);
         let _ = io::stdout().flush();
@@ -48,6 +48,7 @@ pub fn run() {
                         let modified_arg = OsString::from(arg.replace("\\", ""));
                         modified_arg
                     })
+                    .filter(|x| !x.is_empty())
                     .collect::<Vec<OsString>>();
 
                 match command {

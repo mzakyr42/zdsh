@@ -7,7 +7,6 @@ TODO:
 builtin command:
 - [x] cd
 - [x] exit
-- [ ] ls
 - [x] pwd
 - [x] clear
 
@@ -19,7 +18,5 @@ features:
 - [ ] multi process
 - [ ] history
 - [ ] variable
-
-multiline input still imperfect
 
 sorry for my bad english.
