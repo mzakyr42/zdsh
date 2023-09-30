@@ -15,8 +15,11 @@ features:
 - [x] comment
 - [x] multiline input
 - [ ] completion
-- [ ] multi process
+- [ ] fork process
 - [ ] history
 - [ ] variable
+
+fixing stuff:
+- [ ] remove ctrl-c from the input
 
 sorry for my bad english.
