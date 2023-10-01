@@ -8,18 +8,18 @@ builtin command:
 - [x] cd
 - [x] exit
 - [x] pwd
-- [x] clear
+- [x] clear (rustyline)
 
 features:
 - [x] pipe
 - [x] comment
 - [x] multiline input
 - [ ] completion
-- [ ] fork process
-- [ ] history
+- [x] fork process
+- [x] history (rustyline)
 - [ ] variable
 
 fixing stuff:
-- [ ] remove ctrl-c from the input
+- [ ] editable multiline input
 
 sorry for my bad english.
