@@ -1,5 +1,6 @@
 use rustyline::error::ReadlineError;
-use rustyline::DefaultEditor;
+use rustyline::history::DefaultHistory;
+use rustyline::Editor;
 use std::env;
 use std::ffi::OsString;
 use std::path::Path;
@@ -7,7 +8,7 @@ use std::process::{self, Child, Command};
 
 pub fn run() {
     let mut multiline_input = String::new();
-    let mut rl = DefaultEditor::new().expect("cannot create the default editor");
+    let mut rl = Editor::<(), DefaultHistory>::new().expect("cannot create the default editor");
     if rl
         .load_history(&format!("{}/.zdsh_history", env::var("HOME").unwrap()))
         .is_err()
@@ -141,6 +142,7 @@ pub fn run() {
             }
             Err(ReadlineError::Interrupted) => {
                 println!("Ctrl-C");
+                multiline_input.clear();
                 break;
             }
             Err(ReadlineError::Eof) => {
